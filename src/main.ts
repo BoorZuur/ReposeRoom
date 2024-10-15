@@ -1,0 +1,1 @@
+let minutesAmount = 0;
