@@ -14,7 +14,7 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
 input.buttonsAB.onEvent(ButtonEvent.Click, function () {
     timer = room
     network.infraredSendNumber(111)
-    servos.A1.setAngle(90)
+    crickit.servo1.setAngle(90)
     for (let i = 0; i < timer; i++) {
         room--
         pause(100)
@@ -23,7 +23,7 @@ input.buttonsAB.onEvent(ButtonEvent.Click, function () {
     }
     console.log(room)
     network.infraredSendNumber(100)
-    servos.A1.setAngle(0)
+    crickit.servo1.setAngle(0)
 })
 
 // de eerste is de kamer nummer => 1 =room1
