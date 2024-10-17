@@ -106,3 +106,19 @@ footer {
     padding: 1rem 0;
     text-align: center;
 }
+
+footer div {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 0 5rem 0;
+}
+
+footer strong {
+    margin-bottom: 1rem;
+}
+
+.footerinfo, .footernav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
