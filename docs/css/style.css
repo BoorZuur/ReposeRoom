@@ -82,7 +82,7 @@ a:hover {
 }
 
 nav {
-    background-color: var(--color-primary);
+    background-color: var(--color-bg);
     color: var(--color-text);
     padding: 1rem 0;
 }
@@ -91,6 +91,13 @@ nav div {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 1rem 0;
+    text-align: center;
 }
 
 footer {
