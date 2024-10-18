@@ -87,6 +87,7 @@ header {
     text-align: center;
     background-image: ;
     height: 80vh;
+    align-items: center;
 }
 
 footer {
@@ -105,6 +106,7 @@ footer {
 .footer-right{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 footer a{
     background-color: var(--color-bg);
