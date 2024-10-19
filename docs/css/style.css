@@ -17,59 +17,79 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--color-bg);
+    background-color: var(--color-quaternary);
     color: var(--color-text);
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
     padding: 0;
     font-family: Lexend, sans-serif;
     font-weight: 700;
     margin-bottom: 1rem;
 }
+
 h1 {
     font-size: 2.5rem;
 }
+
 h2 {
     font-size: 2rem;
 }
+
 h3 {
     font-size: 1.5rem;
 }
+
 h4 {
     font-size: 1.25rem;
 }
+
 h5 {
     font-size: 1rem;
 }
+
 h6 {
     font-size: 0.875rem;
 }
+
 p {
     margin: 0;
     padding: 0;
     margin-bottom: 1rem;
 }
+
 a {
     text-decoration: none;
     color: var(--color-text);
     background-color: var(--color-quaternary);
+    border: 3px solid var(--color-quaternary);
     padding: 0.8rem 2rem;
     border-radius: 10px;
 }
+
 a:hover {
     text-decoration: none;
     color: var(--color-bg);
     background-color: var(--color-quaternary);
-    border: #FFE8D6, solid;
+    border: 3px solid var(--color-text);
 }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+}
+
+.spacer {
+    flex: 1;
 }
 
 nav {
@@ -85,9 +105,13 @@ header {
     color: var(--color-text);
     padding: 1rem 0;
     text-align: center;
-    background-image: ;
+    background-image: url(); /* TODO: Add a background image */
     height: 80vh;
     align-items: center;
+}
+
+main {
+    padding: 2rem 0;
 }
 
 footer {
@@ -95,26 +119,50 @@ footer {
     color: var(--color-text);
     padding: 1rem 0;
     text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
-.footer-left{
+
+footer div {
     display: flex;
-    flex-direction: row;
-}
-.footer-right{
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-footer a{
-    background-color: var(--color-bg);
-}
-.socials{
+
+.footerinfo {
     display: flex;
     flex-direction: column;
 }
-.socials a{
+
+.footernav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footerlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footerlinks a {
+    margin: 0 auto;
+}
+
+footer strong {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+footer a {
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-bg);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.socials a {
     background-color: var(--color-text);
 }
