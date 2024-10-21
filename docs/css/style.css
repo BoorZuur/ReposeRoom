@@ -112,7 +112,7 @@ header {
     color: var(--color-text);
     padding: 1rem 0;
     text-align: center;
-    background-image: url(); /* TODO: Add a background image */
+    background-image: url(); /* TODO: Add a background image. Let op: foto verschilt per pagina!!*/
     height: 80vh;
     align-items: center;
 }
