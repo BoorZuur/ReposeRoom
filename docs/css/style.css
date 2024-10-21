@@ -109,13 +109,24 @@ nav {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-primary);
     color: var(--color-text);
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
-    background-image: url(); /* TODO: Add a background image. Let op: foto verschilt per pagina!!*/
     height: 80vh;
+    gap: 2rem;
     align-items: center;
+    justify-content: center;
+    background-size: cover;
+}
+
+header div {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-flow: row wrap;
 }
 
 main {
@@ -127,6 +138,10 @@ section {
 }
 
 /* Homepage */
+#homepage-header {
+    background-image: url('../images/homepagedarker.jpg');
+}
+
 #section-features {
     display: flex;
     gap: 2rem;
