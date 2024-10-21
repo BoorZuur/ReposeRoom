@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
+<!--
+De main gebruikt .playground-instructions, h3,p
+Er staat een link naar de tijdslots in de p dit moet dezelfde css krijgen als de p met wel een indicatie van een link: kleur/textdecoration
+de a in de p heeft geen id of class nodig: p a[].
+-->
 <body>
     <nav>
         <img src="images/logo" alt="ReposeRoom-logo">
@@ -17,8 +22,37 @@
         <h1>Titel</h1>
         <p>Basis uitleg</p>
     </header>
-    <main>
-
+    <main id="instructions">
+        <h2>
+            Het werkt met de playground
+        </h2>
+        <p>je zet de timer met A en B of via <a href="timeslot.html">Tijdsslot</a>
+            en controleert je hartslag met je vinger op het lichtje om het licht in de ruimte aan te passen.
+        </p>
+        <div class="playground-instructions">
+             <!--output instructions nog invullen met Martijn-->
+            <img src="images/playground" alt="playground">
+            <ul>
+                <li>1 telt tijd van de timer op</li>
+                <li>2 telt tijd van de timer af</li>
+                <li>wanneer 1+2 tegerlijkertijd indrukt start de timer</li>
+                <li>3 als je jouw vinger hierop legt controleert het jouw hartslag als het aan staat</li>
+            </ul>
+        </div>
+        <h3>Hoe het precies werkt</h3>
+        <p>
+            Terwijl je de tijd instelt controleert het hoe donker de kamer is,
+            zodat het als de je de timer start het hartslaglichtje aangezet kan worden zonder interventie van het eigen licht.
+        </p>
+        <p>
+            Met elke press wordt de timervalue verzonden via IR naar de andere timers en de website. Je hartslag word niet verzonden.
+        </p>
+        <p>
+            als je AB drukt neemt het de timer van de website, tenzij je het op locatie instelt.
+        </p>
+        <p>
+            De website verzend via een playground IR van de timevalue en het aanzetten naar de timers.
+        </p>
     </main>
     <footer>
         <div>
