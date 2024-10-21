@@ -10,7 +10,33 @@ let windowSize = 20;
 let beatWindow = 200; // Minimum time between beats (ms)
 
 light.setBrightness(255);
-light.setPixelColor(1, Colors.Green);
+for (let i = 0; i < 3; i++) {
+    light.setPixelColor(i, Colors.Green);
+}
+
+input.touchA4.onEvent(ButtonEvent.Click, function () {
+    console.log("DOWN!")
+})
+
+input.touchA4.onEvent(ButtonEvent.Up, function () {
+    console.log("UP!")
+})
+
+function showLights(arr: number) {
+    if (arr <= 60) {
+        for (let i = 3; i < 9; i++) {
+            light.setPixelColor(i, Colors.Green)
+        }
+    } else if (arr > 60 && arr <= 80) {
+        for (let i = 3; i < 9; i++) {
+            light.setPixelColor(i, Colors.Orange)
+        }
+    } else if (arr > 80) {
+        for (let i = 3; i < 9; i++) {
+            light.setPixelColor(i, Colors.Red)
+        }
+    }
+}
 
 function findMax(arr: number[]): number {
     let max = arr[0];
@@ -31,6 +57,8 @@ function findMin(arr: number[]): number {
     }
     return min;
 }
+
+
 
 forever(function () {
     let currentReading = input.lightLevel();
@@ -59,20 +87,24 @@ forever(function () {
 
             if (isPeak && control.millis() - lastBeatTime > beatWindow) {
                 // Beat detected
-                light.setPixelColor(7, Colors.Red);
+                light.setPixelColor(9, Colors.Red);
                 lastBeatTime = control.millis();
                 beatTimes.push(lastBeatTime);
+                if (beatTimes.length > 20) {
+                    beatTimes.shift()
+                }
 
                 // Calculate BPM
                 if (beatTimes.length > 2) {
                     let recentBeats = beatTimes.slice(-3);
                     let averageInterval = (recentBeats[2] - recentBeats[0]) / 2;
                     let bpm = Math.round(60000 / averageInterval);
-                    console.log("BPM: " + bpm);
+                    console.log(`BPM: ${bpm}`);
+                    showLights(bpm);
                 }
             }
         } else {
-            light.setPixelColor(7, Colors.Black);
+            light.setPixelColor(9, Colors.Black);
         }
     }
 
