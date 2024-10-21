@@ -82,6 +82,13 @@ a:hover {
     border: 3px solid var(--color-text);
 }
 
+p a {
+    border: none;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
