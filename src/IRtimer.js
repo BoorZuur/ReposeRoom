@@ -1,5 +1,5 @@
 let room = 0
-let closed=false
+let closed = false
 //network.onInfraredReceivedNumber(function (num: number) {room=num})
 network.infraredSendNumber(0)// turns the other playground on to recieve.
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -19,7 +19,7 @@ input.buttonsAB.onEvent(ButtonEvent.Click, function () {
     }
     // starts timer
     network.infraredSendNumber(111)
-    closed=true
+    closed = true
     crickit.servo1.setAngle(90)
     for (let i = 0; i < timer; i++) {
         room--
@@ -49,7 +49,7 @@ network.onInfraredReceivedNumber(function (num: number) {
         roomtimer = num
     }
     console.log(roomtimer)
-}) 
+})
 forever(function () {
     if (closed) {
         //run heartRateCode
