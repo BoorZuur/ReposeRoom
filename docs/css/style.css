@@ -231,10 +231,16 @@ footer a {
 
 .timeslot-header {
     background-image: url('../images/timeslot-pagina.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* confirmation */
 
 .header-confirmation {
     background-image: url('../images/bevestegingspagina.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
