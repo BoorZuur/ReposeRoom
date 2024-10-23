@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>ReposeRoom uitleg</title>
 </head>
-<!--
-De main gebruikt .playground-instructions, h3,p
-Er staat een link naar de tijdslots in de p dit moet dezelfde css krijgen als de p met wel een indicatie van een link: kleur/textdecoration
-de a in de p heeft geen id of class nodig: p a[]
--->
-
 <body>
     <nav>
         <img src="images/logo-repose-room.jpg" alt="ReposeRoom-logo">
@@ -27,21 +21,28 @@ de a in de p heeft geen id of class nodig: p a[]
     <main id="instructions">
         <div class="container">
             <h2>
-                Het werkt met de Circuit Playground Express
+                Instructies
             </h2>
             <p>
                 je zet de timer met A en B of via <a href="timeslot.html">Tijdsslot</a>
             </p>
+            <div>
+                <h3>Algemeen</h3>
+                <ul>
+                    <li>A telt tijd van de timer op/ gaat naar het hartritme checker toe</li>
+                    <li>B telt tijd van de timer af/ gaat naar het temperatuur en geluid checker toe</li>
+                    <li>wanneer A+B tegerlijkertijd indrukt start/stopt de timer</li>
+                </ul>
+            </div>
             <div class="playground-instructions">
                 <div>
-                    <!--output instructions nog invullen met Martijn-->
-                    <img src="images/timer-output.png" alt="timer-output-screen">
+                    <h3>Timer scherm</h3> <img src="images/timer-output.png" alt="timer-output-screen">
                     <ul>
                         <li>de tijd op de timer staat aangegeven met met voor elke 10 minuten een blauw lampje aan.</li>
                     </ul>
                 </div>
                 <div>
-                    <!--output instructions nog invullen met Martijn-->
+                    <h3>Hartslag scherm</h3>
                     <img src="images/heart-beat.png" alt="heart-beat-screen">
                     <ul>
                         <li>als je jouw vinger op de groene lichtjes legt controleert het jouw hartslag</li>
@@ -49,20 +50,15 @@ de a in de p heeft geen id of class nodig: p a[]
                     </ul>
                 </div>
                 <div>
-                    <!--output instructions nog invullen met Martijn-->
+                    <h3>Temperatuur en geluid scherm</h3>
                     <img src="images/temp-sound.png" alt="temp-sound-screen">
                     <ul>
                         <li>de oranje lichtjes geven de temperatuur aan en de rode het geluid in groen, oranje en rood
                         </li>
                     </ul>
                 </div>
-                <ul>
-                    <li>A telt tijd van de timer op/ gaat naar het hartritme checker toe</li>
-                    <li>B telt tijd van de timer af/ gaat naar het temperatuur en geluid checker toe</li>
-                    <li>wanneer A+B tegerlijkertijd indrukt start/stopt de timer</li>
-                </ul>
             </div>
-            <h3>Hoe het precies werkt</h3>
+            <h2>Inzichten</h2>
             <p>
                 als je AB drukt neemt het de timer van de website, tenzij je het op locatie instelt.
             </p>
