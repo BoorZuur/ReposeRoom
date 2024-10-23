@@ -176,7 +176,21 @@ section {
     background-color: var(--color-primary);
     border: 3px solid var(--color-primary);
 }
-
+/* Instructions */
+#instructions-header {
+    background-image: url('../images/uitlegpagina.jpg');
+}
+.playground-instructions{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.playground-instructions div{
+    flex: 1;
+}
+.playground-instructions div img{
+    width: 100%;
+}
 /* Footer */
 footer {
     background-color: var(--color-bg);
