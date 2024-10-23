@@ -105,7 +105,13 @@ nav {
     color: var(--color-text);
     padding: 1rem 0;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+}
+
+nav img {
+    height: 50px;
+    border-radius: 10px;
 }
 
 header {
@@ -199,6 +205,11 @@ footer {
     text-align: center;
 }
 
+footer img {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
 footer div {
     display: flex;
     align-items: center;
@@ -234,11 +245,9 @@ footer a {
 
 .socials {
     display: flex;
-    flex-direction: column;
-}
-
-.socials a {
-    background-color: var(--color-text);
+    flex-direction: row;
+    gap: 1rem;
+    font-size: 2rem;
 }
 
 /* timeslot */
