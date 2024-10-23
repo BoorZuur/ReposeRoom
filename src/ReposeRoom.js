@@ -14,7 +14,7 @@ function init() {
     input.setLoudSoundThreshold(225);
     input.setLightThreshold(LightCondition.Dark, 40);
     input.setLightThreshold(LightCondition.Bright, 240);
-    light.setBrightness(100);
+    light.setBrightness(80);
     light.setPixelColor(0, timerColor);
 }
 
@@ -84,12 +84,6 @@ function screenTimeLeft() {
     }
 }
 
-// screen to show heartbeat
-function screenHeartbeat() {
-    screen = "heartbeat";
-    measureBpm()
-}
-
 // screen to show time left
 function screenTempSound() {
     screen = "tempSound";
@@ -119,7 +113,12 @@ function screenTempSound() {
         pause(10)
     }
     light.clear()
-    screenTimeLeft()
+    light.setBrightness(80)
+    if (roomClosed) {
+        screenTimeLeft()
+    } else {
+        screenSelectTimer()
+    }
 }
 
 // close room and show home menu
@@ -182,13 +181,15 @@ input.onSwitchMoved(SwitchDirection.Right, function () {
 init();
 
 // measure bpm
-function measureBpm() {
+function screenHeartbeat() {
     let readings: number[] = [];
     let beatTimes: number[] = [];
     let lastBeatTime = 0;
     let threshold = 0;
     let windowSize = 20;
     let beatWindow = 600; // Minimum time between beats (ms)
+
+    screen = "heartbeat";
 
     light.clear()
     light.setBrightness(255);
@@ -284,5 +285,11 @@ function measureBpm() {
 
         pause(20);
     }
-    screenTimeLeft()
+    light.clear()
+    light.setBrightness(80)
+    if (roomClosed) {
+        screenTimeLeft()
+    } else {
+        screenSelectTimer()
+    }
 }
