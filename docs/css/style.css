@@ -230,17 +230,11 @@ footer a {
 /* timeslot */
 
 .timeslot-header {
-    background-image: url('../images/timeslot-pagina.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url('../images/timeslot-pagina-darker.jpg');
 }
 
 /* confirmation */
 
 .header-confirmation {
-    background-image: url('../images/bevestegingspagina.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url('../images/bevestegingspagina-darker.jpg');
 }
