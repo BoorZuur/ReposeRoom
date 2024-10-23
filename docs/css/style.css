@@ -226,3 +226,9 @@ footer a {
 .socials a {
     background-color: var(--color-text);
 }
+
+/* timeslot */
+
+.timeslot-header {
+    background-image: url('../images/timeslot-pagina.jpg');
+}
