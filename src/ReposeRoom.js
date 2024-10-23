@@ -16,6 +16,7 @@ function init() {
     input.setLightThreshold(LightCondition.Bright, 240);
     light.setBrightness(80);
     light.setPixelColor(0, timerColor);
+    openRoom()
 }
 
 // start timer in parallel
@@ -125,7 +126,7 @@ function screenTempSound() {
 function closeRoom() {
     startTimer();
     roomClosed = true;
-    crickit.servo1.setAngle(90)
+    crickit.servo1.setAngle(0)
     screenTimeLeft()
 }
 
@@ -133,7 +134,7 @@ function closeRoom() {
 function openRoom() {
     roomClosed = false;
     timer = 0;
-    crickit.servo1.setAngle(0)
+    crickit.servo1.setAngle(180)
     screenSelectTimer()
 }
 
