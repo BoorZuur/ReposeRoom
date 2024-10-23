@@ -232,3 +232,9 @@ footer a {
 .timeslot-header {
     background-image: url('../images/timeslot-pagina.jpg');
 }
+
+/* confirmation */
+
+.header-confirmation {
+    background-image: url('../images/bevestegingspagina.jpg');
+}
