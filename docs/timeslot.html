@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Tijdslot reserveren</title>
 </head>
+
+<!-- Alle pagina specifieke stukken hebben een eigen class gekregen voor eigen flex en specifieke eigenschappen -->
 
 <body>
     <nav>
@@ -15,55 +17,115 @@
         <a href="instructions.html">Instructies</a>
         <a href="timeslot.html">Tijdsslot</a>
     </nav>
-    <header>
+    <header class="timeslot-header">
         <h1>Tijdslots</h1>
         <p>Dit is de plek om je privacy terug te brengen en je tijdslot te reserveren!</p>
     </header>
     <main>
-        <section>
+        <section class="timeslot-reservation">
             <h2>Tijdslots reserveren?</h2>
             <p>Binnen de ReposeRoom kun je op twee manieren een tijdslot reserveren op een ruimte. Het reserveren kun je
                 doen doormiddel van de circuit playground of via deze pagina.</p>
         </section>
-        <div>
+        <!-- Beschikbaarheid zou je uiteindelijk in het rechter vak moeten kunnen zien, als je de specifieke ruimte hebt gereserveerd.
+         Het "daadwerkelijke" reserveringssysteem werkt niet, aangezien ik geen php bestand heb ervoor, hierdoor verandert de 
+         beschikbaarheidsafbeelding ook niet. -->
+        <div class="room-container">
             <article>
-                <img src="#" alt="Slaapkamer">
+                <div>
+                    <img src="ReposeRoom/docs/images/slaapkamer.jpg" alt="Slaapkamer">
+                </div>
                 <div>
                     <h3>Slaapkamer</h3>
-                    <p>Datum:</p>
                     <p>beschikbaarheid:</p>
                 </div>
-            </article>
-            <article>
-                <img src="#" alt="Badkamer">
                 <div>
-                    <h3>Badkamer</h3>
-                    <p>Datum:</p>
-                    <p>beschikbaarheid:</p>
+                    <img src="ReposeRoom/docs/images/beschikbaar-groen.jpg" alt="Beschikbaarheid in kleur">
                 </div>
             </article>
             <article>
-                <img src="#" alt="Zolder">
+                <div>
+                    <img src="ReposeRoom/docs/images/studieruimte.jpg" alt="Studieruimte">
+                </div>
+                <div>
+                    <h3>Studieruimte</h3>
+                    <p>beschikbaarheid:</p>
+                </div>
+                <div>
+                    <img src="ReposeRoom/docs/images/beschikbaar-rood.jpg" alt="Beschikbaarheid in kleur">
+                </div>
+            </article>
+            <article>
+                <div>
+                    <img src="ReposeRoom/docs/images/zolder.jpg" alt="Zolder">
+                </div>
                 <div>
                     <h3>Zolder</h3>
-                    <p>Datum:</p>
                     <p>beschikbaarheid:</p>
+                </div>
+                <div>
+                    <img src="ReposeRoom/docs/images/beschikbaar-rood.jpg" alt="Beschikbaarheid in kleur">
                 </div>
             </article>
             <article>
-                <img src="#" alt="Mancave">
+                <div>
+                    <img src="ReposeRoom/docs/images/mancave.jpg" alt="Mancave">
+                </div>
                 <div>
                     <h3>Mancave</h3>
-                    <p>Begintijd:</p>
-                    <p>Eindtijd:</p>
+                    <p>beschikbaarheid:</p>
+                </div>
+                <div>
+                    <img src="ReposeRoom/docs/images/beschikbaar-groen.jpg" alt="Beschikbaarheid in kleur">
                 </div>
             </article>
-        </div>
+        </div> <br><br>
+        <!-- De form is voor het reserveren van het tijdslot. 
+         Het "daadwerkelijke" reserveringssysteem werkt niet, aangezien ik geen php bestand heb ervoor. 
+         Hierdoor staat er op de confirmation pagina ook alleen dat de slaapkamer gereserveerd word.-->
+        <section class="form-container">
+            <form action="confirmation.html" method="post">
+                <div>
+                    <label for="name">Naam*</label>
+                    <input type="text" name="name" id="name" placeholder="naam" required>
+                </div>
+                <div>
+                    <label for="topic">Kies een van de ruimtes*</label>
+                    <select id="topic" name="topic" required>
+                        <option value="" disabled selected>Kies de ruimte!</option>
+                        <option value="0">Slaapkamer</option>
+                        <option value="1">Studieruimte</option>
+                        <option value="2">Zolder</option>
+                        <option value="3">Mancave</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Datum*</label>
+                    <input type="date" id="date" name="datum" required>
+                </div>
+                <div>
+                    <div>
+                        <label for="appt">Begintijd</label>
+                        <input type="time" id="start-time" name="appt" required>
+                    </div>
+                    <div>
+                        <label for="appt">Eindtijd</label>
+                        <input type="time" id="end-time" name="appt" required>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit">Verzenden</button>
+                </div>
+                <div>
+                    <label for="must">* verplichte velden</label>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <div>
             <div class="footer-left">
-                <img src="images/logo" alt="ReposeRoom-logo">
+                <img src="ReposeRoom/docs/images/logo-repose-room.jpg" alt="ReposeRoom-logo">
                 <p>© ReposeRoom 2024</p>
                 <div class="socials">
                     <a href=""> <img src="" alt=""></a>
