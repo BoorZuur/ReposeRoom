@@ -184,7 +184,7 @@ section {
 }
 /* Instructions */
 #instructions-header {
-    background-image: url('../images/uitlegpagina.jpg');
+    background-image: url('../images/uitlegpagina-darker.jpg');
 }
 .playground-instructions{
     display: flex;
