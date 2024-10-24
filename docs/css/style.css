@@ -188,19 +188,29 @@ section {
 }
 /* Instructions */
 #instructions-header {
-    background-image: url('../images/uitlegpagina.jpg');
+    background-image: url('../images/uitlegpagina-darker.jpg');
 }
-.playground-instructions{
+
+.playground-instructions {
     display: flex;
-    flex-direction: row;
     gap: 10px;
 }
-.playground-instructions div{
+
+.playground-instructions div,
+ul {
     flex: 1;
 }
-.playground-instructions div img{
+
+.playground-instructions div img {
     width: 100%;
 }
+
+.playground-instructions div h3 {
+    height: 3rem;
+    text-align: center;
+    align-items: center;
+}
+
 /* Footer */
 footer {
     background-color: var(--color-bg);

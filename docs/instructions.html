@@ -7,12 +7,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>ReposeRoom uitleg</title>
 </head>
-<!--
-De main gebruikt .playground-instructions, h3,p
-Er staat een link naar de tijdslots in de p dit moet dezelfde css krijgen als de p met wel een indicatie van een link: kleur/textdecoration
-de a in de p heeft geen id of class nodig: p a[]
--->
-
 <body>
     <nav>
         <img src="images/logo-repose-room.jpg" alt="ReposeRoom-logo">
@@ -25,76 +19,76 @@ de a in de p heeft geen id of class nodig: p a[]
         <p>instructies en inzicht</p>
     </header>
     <main id="instructions">
-        <h2>
-            Het werkt met de Circuit Playground Express
-        </h2>
-        <p>
-            je zet de timer met A en B of via <a href="timeslot.html">Tijdsslot</a>
-        </p>
-        <div class="playground-instructions">
+        <div class="container">
+            <h2>
+                Instructies
+            </h2>
+            <p>
+                je zet de timer met A en B of via <a href="timeslot.html">Tijdsslot</a>
+            </p>
             <div>
-                <!--output instructions nog invullen met Martijn-->
-                <img src="images/timer-output.png" alt="timer-output-screen">
+                <h3>Algemeen</h3>
                 <ul>
-                    <li>de tijd op de timer staat aangegeven met met voor elke 10 minuten een blauw lampje aan.</li>
+                    <li>A telt tijd van de timer op/ gaat naar het hartritme checker toe</li>
+                    <li>B telt tijd van de timer af/ gaat naar het temperatuur en geluid checker toe</li>
+                    <li>wanneer A+B tegerlijkertijd indrukt start/stopt de timer</li>
                 </ul>
             </div>
-            <div>
-                <!--output instructions nog invullen met Martijn-->
-                <img src="images/heart-beat.png" alt="heart-beat-screen">
-                <ul>
-                    <li>als je jouw vinger op de groene lichtjes legt controleert het jouw hartslag</li>
-                    <li>De rode lichtjes geven aan of je hartslag laag of hoog is in groen,oranje en rood</li>
-                </ul>
+            <div class="playground-instructions">
+                <div>
+                    <h3>Timer scherm</h3> <img src="images/timer-output.png" alt="timer-output-screen">
+                    <ul>
+                        <li>de tijd op de timer staat aangegeven met met voor elke 10 minuten een blauw lampje aan.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Hartslag scherm</h3>
+                    <img src="images/heart-beat.png" alt="heart-beat-screen">
+                    <ul>
+                        <li>als je jouw vinger op de groene lichtjes legt controleert het jouw hartslag</li>
+                        <li>De rode lichtjes geven aan of je hartslag laag of hoog is in groen,oranje en rood</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Temperatuur en geluid scherm</h3>
+                    <img src="images/temp-sound.png" alt="temp-sound-screen">
+                    <ul>
+                        <li>de oranje lichtjes geven de temperatuur aan en de rode het geluid in groen, oranje en rood
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <!--output instructions nog invullen met Martijn-->
-                <img src="images/temp-sound.png" alt="temp-sound-screen">
-                <ul>
-                    <li>de oranje lichtjes geven de temperatuur aan en de rode het geluid in groen, oranje en rood</li>
-                </ul>
-            </div>
-            <ul>
-                <li>A telt tijd van de timer op/ gaat naar het hartritme checker toe</li>
-                <li>B telt tijd van de timer af/ gaat naar het temperatuur en geluid checker toe</li>
-                <li>wanneer A+B tegerlijkertijd indrukt start/stopt de timer</li>
-            </ul>
+            <h2>Inzichten</h2>
+            <p>
+                als je AB drukt neemt het de timer van de website, tenzij je het op locatie instelt.
+            </p>
+            <p>
+                De website verzend via een playground IR van de timevalue en het aanzetten naar de timers.
+            </p>
         </div>
-        <h3>Hoe het precies werkt</h3>
-        <p>
-            als je AB drukt neemt het de timer van de website, tenzij je het op locatie instelt.
-        </p>
-        <p>
-            De website verzend via een playground IR van de timevalue en het aanzetten naar de timers.
-        </p>
     </main>
     <footer>
-        <div class="container">
-            <div class="footerinfo">
+        <div>
+            <div class="footer-left">
                 <img src="images/logo-repose-room.jpg" alt="ReposeRoom-logo">
                 <p>© ReposeRoom 2024</p>
                 <div class="socials">
-                    <span class="mdi mdi-facebook"></span>
-                    <span class="mdi mdi-instagram"></span>
-                    <span class="mdi mdi-whatsapp"></span>
+                    <a href=""> <img src="" alt=""></a>
+                    <a href=""> <img src="" alt=""></a>
                 </div>
             </div>
-            <div class="spacer"></div>
             <div class="footernav">
-                <div class="footerlinks">
-                    <strong>Navigatie</strong>
-                    <a href="index.html">Home</a>
-                    <a href="instructions.html">Instructies</a>
-                    <a href="timeslot.html">Tijdsslot</a>
-                </div>
-                <div class="footerlinks">
-                    <strong>Juridisch</strong>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                    <a href="cookies.html">Cookie Policy</a>
-                </div>
+                <strong>Navigatie</strong>
+                <a href="index.html">Home</a>
+                <a href="instructions.html">Instructies</a>
+                <a href="timeslot.html">Tijdsslot</a>
             </div>
-        </div>
+            <div class="footernav">
+                <strong>Juridisch</strong>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms & Conditions</a>
+                <a href="cookies.html">Cookie Policy</a>
+            </div>
     </footer>
 </body>
 
