@@ -7,6 +7,10 @@
     font-family: Nunito, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --color-bg: #6B705C;
     --color-text: #FFE8D6;
@@ -256,8 +260,152 @@ footer a {
     background-image: url('../images/timeslot-pagina-darker.jpg');
 }
 
+.timeslot-main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.slaapkamer h2, p {
+    margin: 10px ;
+}
+
+.slaapkamer img, .studieruimte img, .zolder img, .mancave img {
+    width: 20vw;
+    border-radius: 15px;
+}
+
+.slaapkamer, .studieruimte, .zolder, .mancave {
+    display: flex;
+    flex-direction: column;
+    border: solid #000000;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.room-container {
+    display: flex;
+    align-content: center;
+    justify-content:space-evenly;
+}
+
+.form-container {
+    padding: 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-content:space-evenly;
+    justify-content: center;
+}
+
+.form-container div {
+    display: flex;
+    flex-direction: column;
+    align-content:space-evenly;
+    justify-content: center;
+}
+
+input, select, textarea, button {
+    text-align: center;
+    border-radius: 5px;
+    border-color: #CB997E;
+    background-color: #DDBEA9;
+    margin: 5px;
+}
+
 /* confirmation */
 
 .header-confirmation {
     background-image: url('../images/bevestegingspagina-darker.jpg');
+}
+
+.confirmation-main {
+    padding: 1.5rem;
+    margin: 1.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.confirmation-main h2 p {
+    padding: 1.5rem;
+    margin: 1.5rem;
+}
+
+/* responsiveness */
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+    }
+ 
+    nav {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .room-container {
+        flex-wrap: wrap;
+    }
+
+    .playground-instructions {
+        flex-wrap: wrap;
+    }
+
+    main {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .center-container {
+        margin-left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-container {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .background {
+        max-width: 100%;
+    }
+
+
 }
